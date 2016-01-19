@@ -18,6 +18,18 @@
 		<prime:panel header="JSF 2.2 Bean Access">
 			<h:outputLabel value="#{helloWorldBean.hello()}" />
 		</prime:panel>
+
+		<!-- 標準コンバーター -->
+		<h:inputText id="now" value="#{helloWorldBean.now()}">
+			<f:convertDateTime pattern="dd.MM.yyyy HH:mm:ss" />
+		</h:inputText>
+
+		<br/>
+
+		<!-- カスタムコンバーター -->
+		<h:inputText id="nowCustom" value="#{helloWorldBean.now()}">
+			<f:converter converterId="defaultDateConverter" />
+		</h:inputText>
 	</h:form>
 </h:body>
 </html>

@@ -5,4 +5,8 @@
     <application>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
     </application>
+    <converter>
+        <converter-id>defaultDateConverter</converter-id>
+        <converter-class>de.fred4jupiter.spring.boot.jsf.DefaultDateConverter</converter-class>
+    </converter>
 </faces-config>
